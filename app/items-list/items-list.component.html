@@ -1,0 +1,13 @@
+    <div class="our_products" *ngFor="let item of itemsList">
+        <div class="product_box" >
+          <figure>
+            <img
+              src="{{item.img}}"
+              alt="#"
+            />
+          </figure>
+          <h3><a routerLink="/items/catalog/{{item._id}}">{{ item.title }}</a></h3>
+           <h2>{{ item.price }} Euro</h2><br>
+        </div>
+      </div>
+

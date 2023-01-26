@@ -1,0 +1,27 @@
+<div class="log-form">
+    <h2>Edit build</h2>
+    <form  [formGroup]="form" class='register' (ngSubmit)="updateItemHandler()" >
+
+      <input type="text" title="title" placeholder="title"  required formControlName="title" />
+      <p class="error" *ngIf="form.get('title')?.touched && form.get('title')?.errors?.['required']">
+        Title is required!
+      </p>
+
+      <input type="text" placeholder="description" formControlName="description" required minlength="10"/>
+      <p class="error" *ngIf="form.get('description')?.touched && form.get('description')?.errors?.['required']">
+        Description is required!
+      </p>
+      <p class="error" *ngIf="form.get('description')?.touched && form.get('description')?.errors?.['minlength']">
+        Description must be at least 10 symbols!
+      </p>
+
+      <input type="text" placeholder="price" formControlName="price" required min="5"/>
+      <p class="error" *ngIf="form.get('price')?.touched && form.get('price')?.errors?.['min']">
+        Price must be at least 5 Euro!
+      </p>
+
+      <button  type="submit" class="btn">Change</button>
+
+    </form>
+  </div>
+

@@ -1,0 +1,130 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400,300,600);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family:'Comic-Sans',;
+  background: url(http://farm8.staticflickr.com/7064/6858179818_5d652f531c_h.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.log-form {
+  width: 40%;
+  min-width: 320px;
+  max-width: 475px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border: solid;
+  
+
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, .25);
+
+  @media(max-width: 40em) {
+    width: 100%;
+    position: relative;
+    margin: 2.5% auto 0 auto;
+    left: 0%;
+    -webkit-transform: translate(0%, 0%);
+    -moz-transform: translate(0%, 0%);
+    -o-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
+  }
+
+  form {
+    display: block;
+    width: 100%;
+    padding: 2em;
+  }
+
+  h2 {
+    width: 100%;
+    color: lighten(white, 20%);
+    font-family: 'Comic-Sans',cursive;
+    font-size: 1.35em;
+    display: block;
+    background: rgb(70, 1, 110) 25%; 
+    width: 100%;
+    text-transform: uppercase;
+    padding: .75em 1em .75em 1.5em;
+    box-shadow: inset 0px 1px 1px fadeout(white, 95%);
+    border: 1px solid darken(#870101, 5%);
+    //text-shadow: 0px 1px 1px darken( #6c0187, 5%);
+    margin: 0;
+    font-weight: 200;
+  }
+
+  input {
+    display: block;
+    margin: auto auto;
+    width: 100%;
+    margin-bottom: 2em;
+    padding: .5em 0;
+    border: none;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 1.25em;
+    color:rgb(70, 1, 110) 25%; 
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .btn {
+    display: inline-block;
+    background: white;
+    border: 1px solid darken(white, 5%);
+    padding: .5em 2em;
+    color: rgb(70, 1, 110) 25%; 
+    margin-right: .5em;
+    box-shadow: inset 0px 2px 0px (black, 80%);
+
+    &:hover {
+      background: lighten rgb(70, 1, 110) 25%;
+      color: rgb(70, 1, 110) 25%;
+  }
+
+  &:active {
+      background: white;
+      box-shadow: inset 0px 1px 1px fadeout(black, 90%);
+  }
+
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .existing {
+    color: rgb(70, 1, 110) 25%; 
+    line-height: .10em;
+    position: relative;
+    top: 2.5em;
+    text-decoration: none;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    float: right;
+
+    &:hover {
+      color: rgb(70, 1, 110) 25%; 
+    }
+
+    &:active {
+      color: rgb(70, 1, 110) 25%; 
+    }
+  }
+
+}

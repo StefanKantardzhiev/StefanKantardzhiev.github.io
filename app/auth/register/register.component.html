@@ -1,0 +1,22 @@
+<div class="log-form">
+  <h2>Register a new account</h2>
+  <form [formGroup]="form" class ='register' (ngSubmit)="registerHandler()" >
+    <input type="text" title="email" placeholder="email"  required formControlName="email" />
+    <p class="error" *ngIf="form.get('email')?.touched && form.get('email')?.errors?.['required']">
+      Email is required!
+    </p>
+    <input type="password" placeholder="password" formControlName="password" required minlength="5"/>
+    <p class="error" *ngIf="form.get('password')?.touched && form.get('password')?.errors?.['required']">
+      Password is required!
+    </p>
+    <p class="error" *ngIf="form.get('password')?.touched && form.get('password')?.errors?.['minlength']">
+      Password must be at least 5 symbols!
+    </p>
+    <input type="url" title="img" placeholder="img URL"  required formControlName="img" />
+    <p class="error" *ngIf="form.get('img')?.touched && form.get('img')?.errors?.['required']">
+      Profile picture is required!
+    </p>
+    <button type="submit" class="btn">Register</button>
+    <a class="existing" routerLink="/auth/login">Already a member? Login Here!</a>
+  </form>
+</div>

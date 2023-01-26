@@ -1,0 +1,13 @@
+<div class="our_products" *ngFor="let item of recentList">
+  <div class="product_box" >
+    <figure>
+      <img
+        src="{{item.img}}"
+        alt="#"
+      />
+    </figure>
+    <h3>{{ item.title }}</h3>
+     <h3>{{ item.price }} Euro</h3>
+     <p *ngFor="let each of item?.description">{{ each }}</p>
+  </div>
+</div>
